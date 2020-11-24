@@ -108,6 +108,16 @@ namespace KellermanSoftware.CompareNetObjects.TypeComparers
                 return;
             }
 
+            // If ReferencEqual does not allow add diff
+            if (!parms.Config.ProhibitReferenceEqualNonPrimitiveClass)
+            {
+                if (Object.ReferenceEquals(parms.Object1, parms.Object2))
+                {
+                    parms.Result.Differences.Add(new Difference() { PropertyName = info.Name, ActualName = "Not Allow Reference Equal" });
+                    return;
+                }
+            }
+
             string currentBreadCrumb = AddBreadCrumb(parms.Config, parms.BreadCrumb, info.Name);
 
             CompareParms childParms = new CompareParms

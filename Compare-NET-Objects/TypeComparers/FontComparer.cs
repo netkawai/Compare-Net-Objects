@@ -45,12 +45,12 @@ namespace KellermanSoftware.CompareNetObjects.TypeComparers
 
             CompareProp(parms, font1.Bold, font2.Bold, "Bold");
             CompareProp(parms, font1.FontFamily.Name, font2.FontFamily.Name, "FontFamily.Name");
-            CompareProp(parms, font1.OriginalFontName, font2.OriginalFontName, "OriginalFontName");
+//            CompareProp(parms, font1.OriginalFontName, font2.OriginalFontName, "OriginalFontName");
             CompareProp(parms, font1.Size, font2.Size, "Size");
             CompareProp(parms, font1.SizeInPoints, font2.SizeInPoints, "SizeInPoints");
             CompareProp(parms, font1.Strikeout, font2.Strikeout, "Strikeout");
             CompareProp(parms, font1.Style, font2.Style, "Style");
-            CompareProp(parms, font1.SystemFontName, font2.SystemFontName, "SystemFontName");
+//            CompareProp(parms, font1.SystemFontName, font2.SystemFontName, "SystemFontName");
             CompareProp(parms, font1.Underline, font2.Underline, "Underline");
             CompareProp(parms, font1.Unit, font2.Unit, "Unit");
         }

@@ -25,6 +25,7 @@ namespace KellermanSoftware.CompareNetObjectsTests
         public void Initialize()
         {
             _compare = new CompareLogic();
+            _compare.Config.ProhibitReferenceEqualNonPrimitiveClass = true;
         }
 
         /// <summary>

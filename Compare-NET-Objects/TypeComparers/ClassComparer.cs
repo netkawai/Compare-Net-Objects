@@ -44,6 +44,15 @@ namespace KellermanSoftware.CompareNetObjects.TypeComparers
                 parms.Result.AddParent(parms.Object1);
                 parms.Result.AddParent(parms.Object2);
 
+                if (parms.Config.ProhibitReferenceEqualNonPrimitiveClass)
+                {
+                    if (Object.ReferenceEquals(parms.Object1, parms.Object2))
+                    {
+                        parms.Result.Differences.Add(new Difference() { PropertyName = parms.BreadCrumb, ActualName = "Not Allow Reference Equal" });
+                        return;
+                    }
+                }
+
                 //Custom classes that implement IEnumerable may have the same hash code
                 //Ignore objects with the same hash code
                 if (!(parms.Object1 is IEnumerable)

@@ -498,6 +498,12 @@ namespace KellermanSoftware.CompareNetObjects
 #endif
         public decimal DecimalPrecision { get; set; }
 
+
+        /// <summary>
+        /// Check Reference Equals
+        /// </summary>
+        public Boolean ProhibitReferenceEqualNonPrimitiveClass { get; set; }
+
         #endregion
 
         #region Methods
@@ -568,6 +574,7 @@ namespace KellermanSoftware.CompareNetObjects
             MaxStructDepth = 2;
             CaseSensitive = true;
             IgnoreStringLeadingTrailingWhitespace = false;
+            ProhibitReferenceEqualNonPrimitiveClass = false;
         }
 #endregion
     }

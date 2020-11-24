@@ -6,10 +6,14 @@ using KellermanSoftware.CompareNetObjectsTests.Attributes;
 
 namespace KellermanSoftware.CompareNetObjectsTests.TestClasses
 {
+
     public class Movie : BaseMedia
     {
         [Compare]
         public string Name { get; set; }
+
+
+        public Person Author {get;set;}
 
         [ExcludeFromEquality]
         public decimal PaymentForTomCruise { get; set; }
